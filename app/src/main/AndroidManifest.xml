@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.service.viajemos">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Viajemos">
+        <activity
+            android:name=".gestion.DetalleViaje"
+            android:exported="false" />
+        <activity
+            android:name=".gestion.ProximosViajes"
+            android:exported="false" />
+        <activity
+            android:name=".conductor.PerfilConductor"
+            android:exported="false" />
+        <activity
+            android:name=".gestion.MostrarRuta"
+            android:exported="false" />
+        <activity
+            android:name=".conductor.ModificarViajes"
+            android:exported="false" />
+        <activity
+            android:name=".pasajero.HistorialViajes"
+            android:exported="false" />
+        <activity
+            android:name=".gestion.BuscarViaje"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gestion.CrearServicio"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".pasajero.RegistroPasajero"
+            android:exported="true" />
+        <activity
+            android:name=".conductor.RegistroConductor"
+            android:exported="false" />
+        <activity
+            android:name=".login.login"
+            android:exported="false" />
+        <activity
+            android:name=".gestion.MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

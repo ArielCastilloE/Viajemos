@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gestion.CrearServicio">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCrearOferta"
+        android:layout_width="279dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtCrearOferta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Crear Servicio"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOrigen"
+        android:layout_width="373dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCrearOferta">
+
+
+        <ImageView
+            android:id="@+id/imgMap"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="56dp"
+            android:src="@drawable/googlemaps" />
+
+        <EditText
+            android:id="@+id/txtUbicacionOrigen"
+            android:layout_width="235dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Ubicación Origen"
+            android:textColor="#C5C2C2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutdestino"
+        android:layout_width="369dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutOrigen">
+
+        <ImageView
+            android:id="@+id/ingDestino"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/googlemaps" />
+
+        <EditText
+            android:id="@+id/txtUbicacionDestino"
+            android:layout_width="234dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Ubicación Destino"
+            android:textColor="#C5C2C2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutfecha"
+        android:layout_width="369dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutdestino">
+
+        <ImageView
+            android:id="@+id/imgFecha"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/calendario" />
+
+        <EditText
+            android:id="@+id/txtFecha"
+            android:layout_width="234dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Fecha del viaje"
+            android:textColor="#C5C2C2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHora"
+        android:layout_width="369dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutfecha">
+
+        <ImageView
+            android:id="@+id/imgHora"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/timer" />
+
+        <EditText
+            android:id="@+id/txtHora"
+            android:layout_width="234dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Hora del viaje"
+            android:textColor="#C5C2C2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCosto"
+        android:layout_width="369dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutHora">
+
+        <ImageView
+            android:id="@+id/imgCosto"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/bolsa_de_dinero" />
+
+        <EditText
+            android:id="@+id/txtCosto"
+            android:layout_width="234dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Costo del viaje"
+            android:textColor="#C5C2C2" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCrearOferta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Crear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCosto"
+        app:layout_constraintVertical_bias="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

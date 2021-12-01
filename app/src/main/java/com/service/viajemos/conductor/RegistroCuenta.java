@@ -138,7 +138,11 @@ public class RegistroCuenta extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){
-                                Intent intent = new Intent(RegistroCuenta.this, InformacionViajemos.class);
+                                Intent intent = new Intent(RegistroCuenta.this, InformacionViajemos.class);                                ;
+                                intent.putExtra("correo", correoBD);
+                                intent.putExtra("id", idUserBD);
+                                intent.putExtra("perfil", perfilBD);
+                                intent.putExtra("perfil", numeroDocumentoBD);
                                 startActivity(intent);
                             }
                             else{
@@ -164,6 +168,10 @@ public class RegistroCuenta extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task2) {
                 if(task2.isSuccessful()){
                     Intent intent = new Intent(RegistroCuenta.this, InformacionViajemos.class);
+                    intent.putExtra("correo", correoBD);
+                    intent.putExtra("id", idUserBD);
+                    intent.putExtra("perfil", perfilBD);
+                    intent.putExtra("perfil", numeroDocumentoBD);
                     startActivity(intent);
                 }
                 else{
@@ -191,6 +199,10 @@ public class RegistroCuenta extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task2) {
                 if(task2.isSuccessful()){
                     Intent intent = new Intent(RegistroCuenta.this, InformacionViajemos.class);
+                    intent.putExtra("correo", correoBD);
+                    intent.putExtra("id", idUserBD);
+                    intent.putExtra("perfil", perfilBD);
+                    intent.putExtra("perfil", numeroDocumentoBD);
                     startActivity(intent);
                 }
                 else{
@@ -229,6 +241,10 @@ public class RegistroCuenta extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task2) {
                 if(task2.isSuccessful()){
                     Intent intent = new Intent(RegistroCuenta.this, InformacionViajemos.class);
+                    intent.putExtra("correo", correoBD);
+                    intent.putExtra("id", idUserBD);
+                    intent.putExtra("perfil", perfilBD);
+                    intent.putExtra("perfil", numeroDocumentoBD);
                     startActivity(intent);
                 }
                 else{

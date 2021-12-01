@@ -20,7 +20,7 @@ public class InformacionViajemos extends AppCompatActivity {
     ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
     DatabaseReference mDatabase;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipodocumento">
+    <item>Seleccione</item>
+    <item>CC</item>
+    <item>NIT</item>
+    <item>CE</item>
+    <item>PASS</item>
+    </string-array>
+</resources>

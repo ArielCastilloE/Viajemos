@@ -8,14 +8,21 @@
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_buscar_viaje.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_crear_servicio.xml" value="0.1796875" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_detalle_viaje.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_historial_viajes.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_informacion_viajemos.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_login.xml" value="0.25317028985507245" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_login2.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_modificar_viajes.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_navegacion.xml" value="0.1796875" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_perfil_conductor.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_perfil_pasajero.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_proximos_viajes.xml" value="0.24003623188405798" />
-        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_registro_conductor.xml" value="0.2171875" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_registrar.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_registro_conductor.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_registro_cuenta.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_registro_pasajero.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/activity_reset_password.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/content_navegacion.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/layout/content_perfil_conductor.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/ariel/AndroidStudioProjects/Viajemos/app/src/main/res/menu/activity_main_drawer.xml" value="0.26875" />

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".conductor.PerfilConductor">
+    tools:context=".pasajero.PerfilPasajero">
 
     <LinearLayout
-        android:id="@+id/linearLayoutPerfilConductor"
-        android:layout_width="353dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/linearLayoutPerfilPasajero"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
@@ -18,52 +18,52 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtPerfilCondutor"
+            android:id="@+id/txtPerfilPasajero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:text="Perfil del Conductor"
+            android:text="Perfil del Pasajero"
             android:textAlignment="center"
             android:textColor="#009688"
             android:textSize="34sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayoutFotoConductor"
+        android:id="@+id/linearLayoutFotoPasajero"
         android:layout_width="177dp"
         android:layout_height="124dp"
         android:layout_marginTop="76dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPerfilConductor">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPerfilPasajero">
 
         <ImageView
-            android:id="@+id/imgFotoConductor"
+            android:id="@+id/imgFotoPasajero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:src="@tools:sample/avatars" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearNombrePerfilConductor"
+        android:id="@+id/linearNombrePerfilPasajero"
         android:layout_width="362dp"
         android:layout_height="44dp"
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFotoConductor"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFotoPasajero"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="26dp">
 
         <TextView
-            android:id="@+id/txtNombrePerfilConductor"
+            android:id="@+id/txtNombrePerfilPasajero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/txtNombrePerfilConductorDB"
+            android:id="@+id/txtNombrePerfilPasajeroDB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -71,24 +71,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearApellidoPerfilConductor"
+        android:id="@+id/linearApellidoPerfilPasajero"
         android:layout_width="362dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearNombrePerfilConductor"
+        app:layout_constraintTop_toBottomOf="@+id/linearNombrePerfilPasajero"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="26dp">
 
         <TextView
-            android:id="@+id/txtApellidoPerfilConductor"
+            android:id="@+id/txtApellidoPerfilPasajero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/txtApellidoPerfilConductorDB"
+            android:id="@+id/txtApellidoPerfilPasajeroDB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -96,24 +96,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearViajesPerfilConductor"
+        android:id="@+id/linearViajesPerfilPasajero"
         android:layout_width="362dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearApellidoPerfilConductor"
+        app:layout_constraintTop_toBottomOf="@+id/linearApellidoPerfilPasajero"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="26dp">
 
         <TextView
-            android:id="@+id/txtViajesPerfilConductor"
+            android:id="@+id/txtViajesPerfilPasajero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/txtViajesPerfilConductorDB"
+            android:id="@+id/txtViajesPerfilPasajeroDB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -121,41 +121,41 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearValoracionPerfilConductor"
+        android:id="@+id/linearValoracionPerfilPasajero"
         android:layout_width="362dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearViajesPerfilConductor"
+        app:layout_constraintTop_toBottomOf="@+id/linearViajesPerfilPasajero"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="26dp">
 
         <TextView
-            android:id="@+id/txtValoracionPerfilConductor"
+            android:id="@+id/txtValoracionPerfilPasajero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/txtValoracionPerfilConductorDB"
+            android:id="@+id/txtValoracionPerfilPasajeroDB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/linearTituloPerfilConductor"
+        android:id="@+id/linearTituloPerfilPasajero"
         android:layout_width="362dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearValoracionPerfilConductor"
+        app:layout_constraintTop_toBottomOf="@+id/linearValoracionPerfilPasajero"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="26dp">
 
         <TextView
-            android:id="@+id/txtTituloComentariosPerfilConductor"
+            android:id="@+id/txtTituloComentariosPerfilPasajero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -163,7 +163,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txtComentariosValoracionConductor"
+        android:id="@+id/textView3"
         android:layout_width="358dp"
         android:layout_height="69dp"
         android:layout_marginTop="16dp"
@@ -171,6 +171,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearTituloPerfilConductor" />
-
+        app:layout_constraintTop_toBottomOf="@+id/linearTituloPerfilPasajero" />
 </androidx.constraintlayout.widget.ConstraintLayout>

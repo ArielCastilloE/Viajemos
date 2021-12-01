@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".pasajero.HistorialViajes">
 
+    <LinearLayout
+        android:id="@+id/linearLayoutHistoricoViajes"
+        android:layout_width="364dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtHistoricoViajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Histórico de Viajes"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="32sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

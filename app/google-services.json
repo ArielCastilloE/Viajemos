@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "788247389758",
+    "firebase_url": "https://viajemos-ud-default-rtdb.firebaseio.com",
+    "project_id": "viajemos-ud",
+    "storage_bucket": "viajemos-ud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788247389758:android:1b280429ac468f6ceb536f",
+        "android_client_info": {
+          "package_name": "com.service.viajemos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788247389758-a02smcu7qie8eat3oq0gt503fg9fgea6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeK9KScb05abt8Pvtdvc1ajvR96af0mzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788247389758-a02smcu7qie8eat3oq0gt503fg9fgea6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

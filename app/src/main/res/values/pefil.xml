@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="perfil">
+    <item>Conductor</item>
+    <item>Pasajero</item>
+    </string-array>
+</resources>

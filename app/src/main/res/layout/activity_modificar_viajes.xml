@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".conductor.ModificarViajes">
 
+    <LinearLayout
+        android:id="@+id/linearLayoutCambiarViaje"
+        android:layout_width="279dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtMOdificarViaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="MOdificar Viaje"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

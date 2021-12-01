@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstRegistroConductor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    tools:context=".conductor.RegistroCuenta">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTituloTegistroConductor"
+        android:layout_width="388dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtRegConductor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Registro Usuario"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTipoDocumentoConductor"
+        android:layout_width="351dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTituloTegistroConductor"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtTipoDocConductor"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Tipo de documento:"
+            android:inputType="textPersonName"
+            android:textColor="#C5C2C2"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinTipoDocumento"
+            android:layout_width="156dp"
+            android:fontFamily="@font/englebert"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="352dp"
+        android:layout_height="517dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTipoDocumentoConductor">
+
+        <EditText
+            android:id="@+id/txtDocumentoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Número de documento"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtNombreRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Nombre(s) y Apellidos"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtFechaNacimientoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Fecha de Nacimiento (AAAAMMDD)"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtGeneroRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Género"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtTelefonoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Numero de Celular"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtCorreoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Correo electrónico"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtMarcaVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Marca del vehículo"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Modelo"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtPlaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Placa"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <EditText
+            android:id="@+id/txtColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/englebert"
+            android:hint="Color"
+            android:inputType="textPersonName"
+            android:textColor="#151515" />
+
+        <Button
+            android:id="@+id/btnRegistroCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="16dp"
+            android:text="Registrar"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/txtColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+            app:layout_constraintVertical_bias="5" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

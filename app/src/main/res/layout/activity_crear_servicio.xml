@@ -47,13 +47,13 @@
             android:layout_marginStart="56dp"
             android:src="@drawable/googlemaps" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/txtUbicacionOrigen"
             android:layout_width="235dp"
             android:layout_height="41dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Ubicación Origen"
+            android:hint="Ubicación origen"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
@@ -75,14 +75,14 @@
             android:layout_marginStart="60dp"
             android:src="@drawable/googlemaps" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/txtUbicacionDestino"
             android:layout_width="234dp"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:hint="Ubicación destino"
             android:inputType="textPersonName"
-            android:text="Ubicación Destino"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
@@ -111,7 +111,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Fecha del viaje"
+            android:hint="Fecha del viaje"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
@@ -140,7 +140,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Hora del viaje"
+            android:hint="Hora del viaje"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
@@ -169,7 +169,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Costo del viaje"
+            android:hint="Costo del viaje"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 

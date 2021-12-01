@@ -35,7 +35,7 @@ import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private String usuario, password;
+    private String usuario, password, idUserBD;
     public static String TAG = "Viajemos";
     // firebase intent
     private FirebaseAuth mAuth;
@@ -70,14 +70,15 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         accedeGoogle = (TextView) findViewById(R.id.txtAccederGoogle);
 
+
+
          btnButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-
-                 usuario = (String) txtUsuario.getText().toString();
-                 password = (String) txtPassword.getText().toString();
-                 if(validateForm(usuario,password)){
-                     loginUser();
+                    usuario = txtUsuario.getText().toString();
+                    password = txtPassword.getText().toString();
+                    if(validateForm()){
+                        loginUser();
                  }
              }
          });
@@ -90,40 +91,33 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        accedeGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String fecha = fecha();
-                String hora = hora();
-                Toast.makeText(LoginActivity.this,"Fecha actual: " + fecha + "Hora actual: "+hora,Toast.LENGTH_LONG).show();
-            }
-        });
+
     }
 
-    private boolean validateForm(String emailS, String passwordS)
+    private boolean validateForm()
     {
         boolean esValido=true;
 
-        emailS.trim();
-        if(TextUtils.isEmpty(emailS)){
+        usuario.trim();
+        if(TextUtils.isEmpty(usuario)){
             esValido=false;
             txtUsuario.setError("Campo Requerido");
         }
 
-        passwordS.trim();
-        if(TextUtils.isEmpty(passwordS)){
+        password.trim();
+        if(TextUtils.isEmpty(password)){
             esValido=false;
             txtPassword.setError("Campo Requerido");
         }
 
-        if(passwordS.length()<6)
+        if(password.length()<6)
         {
             esValido=false;
             txtPassword.setError("La contraseña debe tener al menos 6 caracteres");
         }
 
-        if(esValido=true && TextUtils.isEmpty(passwordS)!=true){
-            if (!validarEmail(emailS)){
+        if(esValido=true && TextUtils.isEmpty(password)!=true){
+            if (!validarEmail(usuario)){
                 txtUsuario.setError("Email no válido");
                 esValido=false;
             }
@@ -132,31 +126,17 @@ public class LoginActivity extends AppCompatActivity {
         return esValido;
     }
 
-    private void updateUI(FirebaseUser user) {
-        if(user!=null){
-            startActivity(new Intent(this,LoginActivity.class));
-            progressDialog.dismiss();
-        }else{
-
-        }
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            reload();
-        }
-    }
-
     private void loginUser(){
-        mAuth.signInWithEmailAndPassword(usuario,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.signInWithEmailAndPassword(usuario,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(LoginActivity.this, InformacionViajemos.class));
+
+                    idUserBD =  mAuth.getCurrentUser().getUid();
+                    Intent intent = new Intent(LoginActivity.this, InformacionViajemos.class);
+                    intent.putExtra("correo", usuario);
+                    intent.putExtra("id", idUserBD);
+                    startActivity(intent);
                     finish();
                 }
                 else{
@@ -166,30 +146,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-
-   /* private void Autenticacion(String email, String password) {
-        // [START sign_in_with_email]
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_LONG).show();
-                            updateUI(null);
-                        }
-                    }
-                });
-        // [END sign_in_with_email]
-    }
-*/
 
     public static boolean validarEmail(String email) {
         String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
@@ -217,6 +173,17 @@ public class LoginActivity extends AppCompatActivity {
         return mytime;
     }
 
-    private void reload() { }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        if(mAuth.getCurrentUser() != null){
+            idUserBD =  mAuth.getCurrentUser().getUid();
+            Intent intent = new Intent(LoginActivity.this, InformacionViajemos.class);
+            intent.putExtra("correo", usuario);
+            intent.putExtra("id", idUserBD);
+            startActivity(intent);
+        }
+    }
 
 }

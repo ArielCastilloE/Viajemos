@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.service.viajemos.R;
 import com.service.viajemos.conductor.RegistroCuenta;
+import com.service.viajemos.pasajero.PerfilPasajero;
 import com.service.viajemos.utilidades.Ciudades;
 
 import java.util.HashMap;
@@ -36,9 +38,10 @@ public class CrearServicio extends AppCompatActivity {
     TextView fechaViaje, horaViaje,cupos, costo;
     String ubicacionOrigenDB, ubicacionDestinoDB, fechaViajeBD, idUserBD, numeroDocumentoDB, horaviajeDB, costoDB, cuposDB, estadoViajeDB, idFechaHora;
     Button btnCrearServicio;
+
     AutoCompleteTextView autoCompleteCiudaOrigen;
     AutoCompleteTextView autoCompleteCiudaDestino ;
-
+    ImageButton imgHome;
     Bundle datosUsuario;
     ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
@@ -60,7 +63,7 @@ public class CrearServicio extends AppCompatActivity {
         autoCompleteCiudaOrigen.setAdapter(adapter);
         autoCompleteCiudaDestino.setAdapter(adapter);
 
-
+        imgHome = (ImageButton) findViewById(R.id.imgHome);
         fechaViaje = (TextView) findViewById(R.id.txtFechaViaje);
         btnCrearServicio = (Button) findViewById(R.id.btnCrearOferta);
         horaViaje = (TextView) findViewById(R.id.txtHoraViaje);
@@ -84,6 +87,14 @@ public class CrearServicio extends AppCompatActivity {
                     }
             }
         });
+        /*
+        imgHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CrearServicio.this, InformacionViajemos.class);
+                startActivity(intent);
+            }
+        });*/
 
     }
 

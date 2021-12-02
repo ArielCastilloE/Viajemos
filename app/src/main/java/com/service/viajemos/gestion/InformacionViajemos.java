@@ -13,14 +13,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.service.viajemos.R;
+import com.service.viajemos.conductor.PerfilConductor;
 import com.service.viajemos.login.LoginActivity;
 import com.service.viajemos.pasajero.HistorialViajes;
+import com.service.viajemos.pasajero.PerfilPasajero;
 
 public class InformacionViajemos extends AppCompatActivity {
 
@@ -112,6 +115,27 @@ public class InformacionViajemos extends AppCompatActivity {
             }
         });
 
+        verPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(perfilBD.equals(PASAJERO)) {
+                    Intent intent = new Intent(InformacionViajemos.this, PerfilPasajero.class);
+                    intent.putExtra("correo", correoBD);
+                    intent.putExtra("id", idUserBD);
+                    intent.putExtra("perfil", perfilBD);
+                    startActivity(intent);
+                }
+                else if(perfilBD.equals(CONDUCTOR)){
+                    Intent intent = new Intent(InformacionViajemos.this, PerfilConductor.class);
+                    intent.putExtra("correo", correoBD);
+                    intent.putExtra("id", idUserBD);
+                    intent.putExtra("perfil", perfilBD);
+                    startActivity(intent);
+                }
+            }
+        });
+
     }
 
     private void consultarPerfil(){
@@ -133,4 +157,20 @@ public class InformacionViajemos extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            reload();
+        }
+        if(currentUser.getUid() == null){
+            Intent intent = new Intent(InformacionViajemos.this, LoginActivity.class);
+            startActivity(intent);
+        }
+    }
+    private void reload() { }
+
 }

@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.service.viajemos.login.LoginActivity;
 import com.service.viajemos.pasajero.HistorialViajes;
+import com.service.viajemos.pasajero.PerfilPasajero;
 import  com.service.viajemos.utilidades.Ciudades;
 
 import android.app.ProgressDialog;
@@ -25,6 +26,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +43,7 @@ public class BuscarViaje extends AppCompatActivity {
     Button  btnBuscarViajes;
     Boolean busquedaExitosa;
     ImageButton imgHome;
+    ImageView imgCarro2;
 
     Bundle datosUsuario;
     AutoCompleteTextView autoCompleteCiudaOrigen;
@@ -70,7 +73,7 @@ public class BuscarViaje extends AppCompatActivity {
 
         buscaFechaViaje = (TextView) findViewById(R.id.txtBuscarFecha);
         btnBuscarViajes = (Button) findViewById(R.id.btnBuscarViajes);
-
+        imgCarro2 = (ImageView) findViewById(R.id.imgCarro2);
         imgHome = (ImageButton) findViewById(R.id.imgHome);
 
         btnBuscarViajes.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +90,14 @@ public class BuscarViaje extends AppCompatActivity {
                 else{
                     Toast.makeText(BuscarViaje.this,"Datos imcompletos en el Formulario", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        imgCarro2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BuscarViaje.this, DetalleViaje.class);
+                startActivity(intent);
             }
         });
     }

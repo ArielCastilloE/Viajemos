@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.service.viajemos.R;
 import com.service.viajemos.login.LoginActivity;
+import com.service.viajemos.pasajero.HistorialViajes;
 
 public class InformacionViajemos extends AppCompatActivity {
 
@@ -26,6 +28,7 @@ public class InformacionViajemos extends AppCompatActivity {
     private String CONDUCTOR = "Conductor";
     private ImageView crearViaje, buscarViaje, verPerfil, consultaHistorial;
     String idUserBD, numeroDocumentoBD, nombreBD, celularBD, correoBD, perfilBD;
+    private ImageButton cerrarSesion;
 
     Bundle datosUsuario;
     ProgressDialog progressDialog;
@@ -43,11 +46,14 @@ public class InformacionViajemos extends AppCompatActivity {
         verPerfil = (ImageView)  findViewById(R.id.imgVerPerfil);
         consultaHistorial =  (ImageView)  findViewById(R.id.imgHistoricoViajes);
 
+        mAuth = FirebaseAuth.getInstance();
+
         datosUsuario = getIntent().getExtras();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         idUserBD = datosUsuario.getString("id");
         correoBD = datosUsuario.getString("correo");
+        cerrarSesion = (ImageButton) findViewById(R.id.imgCerrarSesion);
 
         if(datosUsuario.getString("perfil") !=null){
             perfilBD = datosUsuario.getString("perfil");
@@ -75,6 +81,37 @@ public class InformacionViajemos extends AppCompatActivity {
             }
         });
 
+        buscarViaje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(InformacionViajemos.this, BuscarViaje.class);
+                intent.putExtra("correo", correoBD);
+                intent.putExtra("id", idUserBD);
+                intent.putExtra("perfil",perfilBD);
+                startActivity(intent);
+            }
+        });
+
+        consultaHistorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformacionViajemos.this, HistorialViajes.class);
+                intent.putExtra("correo", correoBD);
+                intent.putExtra("id", idUserBD);
+                intent.putExtra("perfil",perfilBD);
+                startActivity(intent);
+            }
+        });
+
+        cerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(InformacionViajemos.this, LoginActivity.class));
+                finish();
+            }
+        });
+
     }
 
     private void consultarPerfil(){
@@ -83,8 +120,6 @@ public class InformacionViajemos extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     perfilBD = snapshot.child(idUserBD).child("Perfil").getValue().toString();
-                    Toast.makeText(InformacionViajemos.this,"Perfil Recuperado: " +perfilBD, Toast.LENGTH_LONG).show();
-
                 }
                 else {
                     Toast.makeText(InformacionViajemos.this,"Error Consulta  "+ idUserBD, Toast.LENGTH_LONG).show();

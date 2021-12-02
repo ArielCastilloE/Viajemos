@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutHistoricoViajes"
-        android:layout_width="364dp"
-        android:layout_height="62dp"
+        android:layout_width="368dp"
+        android:layout_height="43dp"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,291 @@
             android:text="Histórico de Viajes"
             android:textAlignment="center"
             android:textColor="#009688"
-            android:textSize="32sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constBusquedaViajes"
+        android:layout_width="396dp"
+        android:layout_height="377dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutHistoricoViajes"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutResultado1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:background="#E4E2E2"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgCarro1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/pngwing2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#3EA13131"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imgCarro1">
+
+                <TextView
+                    android:id="@+id/texOrigen1"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Origen: Cartagena" />
+
+                <TextView
+                    android:id="@+id/txtDestino1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Destino: Pasto" />
+
+                <TextView
+                    android:id="@+id/txtFechaHora1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha/Hora: 2021-10-09 15:00" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estado: Terminado" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgConductor1"
+                android:layout_width="28dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:src="@drawable/hombre1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutResultado2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="25dp"
+            android:background="#E4E2E2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutResultado1"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgCarro2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/pngwing3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#3EA13131"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imgCarro2">
+
+                <TextView
+                    android:id="@+id/texOrigen2"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Origen: Bogotá" />
+
+                <TextView
+                    android:id="@+id/txtDestino2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Destino: Ibagué" />
+
+                <TextView
+                    android:id="@+id/txtFechaHora2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha/Hora: 2021-11-26 20:25" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estado: Terminado" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgConductor2"
+                android:layout_width="28dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:src="@drawable/mujer1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutResultado3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="25dp"
+            android:background="#E4E2E2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutResultado2"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgCarro3"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/pngwing5" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#3EA13131"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imgCarro3">
+
+                <TextView
+                    android:id="@+id/texOrigen3"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Origen: Pereira" />
+
+                <TextView
+                    android:id="@+id/txtDestino3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Destino: Manizalez" />
+
+                <TextView
+                    android:id="@+id/txtFechaHora3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha/Hora: 2021-09-06 13:00" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estado: Terminado" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgConductor3"
+                android:layout_width="28dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:src="@drawable/mujer2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutResultado4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="25dp"
+            android:background="#E4E2E2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutResultado3"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgCarro4"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/pngwing5" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#3EA13131"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imgCarro3">
+
+                <TextView
+                    android:id="@+id/texOrigen4"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Origen: Bogotá" />
+
+                <TextView
+                    android:id="@+id/txtDestino4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Destino: Tuluá" />
+
+                <TextView
+                    android:id="@+id/txtFechaHora4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha/Hora: 2021-02-05 08:00" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estado: Terminado" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgConductor4"
+                android:layout_width="28dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:src="@drawable/hombre4" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imgHome"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/homescreen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

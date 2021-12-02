@@ -27,5 +27,15 @@
             android:textColor="#009688"
             android:textSize="34sp" />
     </LinearLayout>
-
+    <ImageButton
+        android:id="@+id/imgHome"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/homescreen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

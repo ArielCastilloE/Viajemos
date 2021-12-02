@@ -250,7 +250,6 @@ public class RegistroCuenta extends AppCompatActivity {
                 else{
                     Toast.makeText(RegistroCuenta.this,"No se pudo crear usuario en la BD", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
     }

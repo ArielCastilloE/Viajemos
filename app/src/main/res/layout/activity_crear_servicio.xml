@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutCrearOferta"
-        android:layout_width="279dp"
-        android:layout_height="59dp"
+        android:layout_width="268dp"
+        android:layout_height="36dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,13 +25,13 @@
             android:text="Crear Servicio"
             android:textAlignment="center"
             android:textColor="#009688"
-            android:textSize="34sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutOrigen"
-        android:layout_width="373dp"
-        android:layout_height="57dp"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,23 +44,23 @@
             android:id="@+id/imgMap"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/googlemaps" />
 
         <AutoCompleteTextView
             android:id="@+id/txtUbicacionOrigen"
-            android:layout_width="235dp"
-            android:layout_height="41dp"
+            android:layout_width="277dp"
+            android:layout_height="45dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Ubicación origen"
-            android:textColor="#C5C2C2" />
+            android:inputType="textPersonName"
+            android:textColor="#101010" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutdestino"
-        android:layout_width="369dp"
-        android:layout_height="51dp"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,24 +72,24 @@
             android:id="@+id/ingDestino"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/googlemaps" />
 
         <AutoCompleteTextView
             android:id="@+id/txtUbicacionDestino"
-            android:layout_width="234dp"
-            android:layout_height="46dp"
+            android:layout_width="277dp"
+            android:layout_height="45dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Ubicación destino"
             android:inputType="textPersonName"
-            android:textColor="#C5C2C2" />
+            android:textColor="#101010" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutfecha"
-        android:layout_width="369dp"
-        android:layout_height="51dp"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,24 +101,24 @@
             android:id="@+id/imgFecha"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/calendario" />
 
         <EditText
-            android:id="@+id/txtFecha"
-            android:layout_width="234dp"
-            android:layout_height="46dp"
+            android:id="@+id/txtFechaViaje"
+            android:layout_width="277dp"
+            android:layout_height="45dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:hint="Fecha del viaje (AAAAMMdd)"
             android:inputType="textPersonName"
-            android:hint="Fecha del viaje"
-            android:textColor="#C5C2C2" />
+            android:textColor="#101010" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutHora"
-        android:layout_width="369dp"
-        android:layout_height="51dp"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,24 +130,24 @@
             android:id="@+id/imgHora"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/timer" />
 
         <EditText
-            android:id="@+id/txtHora"
-            android:layout_width="234dp"
-            android:layout_height="46dp"
+            android:id="@+id/txtHoraViaje"
+            android:layout_width="277dp"
+            android:layout_height="45dp"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Hora del viaje"
-            android:textColor="#C5C2C2" />
+            android:inputType="textPersonName"
+            android:textColor="#101010" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayoutCosto"
-        android:layout_width="369dp"
-        android:layout_height="51dp"
+        android:id="@+id/linearLayoutCupos"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,33 +156,75 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutHora">
 
         <ImageView
+            android:id="@+id/imgCupos"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/grupo" />
+
+        <EditText
+            android:id="@+id/txtCupos"
+            android:layout_width="277dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Cupos disponibles"
+            android:inputType="textPersonName"
+            android:textColor="#101010" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCosto"
+        android:layout_width="400dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCupos">
+
+        <ImageView
             android:id="@+id/imgCosto"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/bolsa_de_dinero" />
 
         <EditText
             android:id="@+id/txtCosto"
-            android:layout_width="234dp"
-            android:layout_height="46dp"
+            android:layout_width="277dp"
+            android:layout_height="45dp"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Costo del viaje"
-            android:textColor="#C5C2C2" />
+            android:inputType="textPersonName"
+            android:textColor="#101010" />
     </LinearLayout>
 
     <Button
         android:id="@+id/btnCrearOferta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="124dp"
+        android:layout_height="42dp"
         android:layout_marginTop="28dp"
         android:text="Crear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCosto"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.013" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="64dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989"
+        app:srcCompat="@drawable/homescreen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutInformacionViajemos"
-        android:layout_width="364dp"
-        android:layout_height="62dp"
+        android:layout_width="356dp"
+        android:layout_height="37dp"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +25,12 @@
             android:text="Viajemos..."
             android:textAlignment="center"
             android:textColor="#009688"
-            android:textSize="32sp" />
+            android:textSize="24sp" />
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="402dp"
         android:layout_height="535dp"
         android:layout_marginTop="12dp"
@@ -135,7 +137,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.582"
-            app:srcCompat="@drawable/googlemaps" />
+            app:srcCompat="@drawable/hombrenegocios" />
 
         <TextView
             android:id="@+id/textView6"
@@ -179,6 +181,18 @@
             app:layout_constraintVertical_bias="0.99" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imgCerrarSesion"
+        android:layout_width="33dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.005"
+        app:srcCompat="@drawable/cerrarsesion" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

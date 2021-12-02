@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idConst1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".gestion.BuscarViaje">
@@ -9,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutBuscarViaje"
-        android:layout_width="279dp"
-        android:layout_height="59dp"
+        android:layout_width="286dp"
+        android:layout_height="44dp"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,13 +27,13 @@
             android:text="Buscar Viaje"
             android:textAlignment="center"
             android:textColor="#009688"
-            android:textSize="34sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutBuscarOrigen"
-        android:layout_width="373dp"
-        android:layout_height="57dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,23 +46,23 @@
             android:id="@+id/imgBuscarMap"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/googlemaps" />
 
         <AutoCompleteTextView
             android:id="@+id/txtBuscarOrigen"
-            android:layout_width="235dp"
-            android:layout_height="41dp"
+            android:layout_width="300dp"
+            android:layout_height="46dp"
             android:ems="10"
+            android:hint="Ubicación origen"
             android:inputType="textPersonName"
-            android:text="Ubicación Origen"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutBusardestino"
-        android:layout_width="369dp"
-        android:layout_height="51dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -72,23 +73,23 @@
             android:id="@+id/ingBuscarDestino"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/googlemaps" />
 
         <AutoCompleteTextView
             android:id="@+id/txtBuscarDestino"
-            android:layout_width="234dp"
+            android:layout_width="300dp"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:hint="Ubicación destino"
             android:inputType="textPersonName"
-            android:text="Ubicación Destino"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutBuscarFecha"
-        android:layout_width="369dp"
+        android:layout_width="400dp"
         android:layout_height="51dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,17 +101,17 @@
             android:id="@+id/imgBuscarFecha"
             android:layout_width="42dp"
             android:layout_height="46dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/calendario" />
 
         <EditText
             android:id="@+id/txtBuscarFecha"
-            android:layout_width="234dp"
+            android:layout_width="300dp"
             android:layout_height="46dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:hint="Fecha del viaje (AAAAMMdd)"
             android:inputType="textPersonName"
-            android:text="Fecha del viaje"
             android:textColor="#C5C2C2" />
     </LinearLayout>
 
@@ -140,6 +141,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnBuscarViajes"></LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constBusquedaViajes"
         android:layout_width="400dp"
         android:layout_height="311dp"
         android:layout_marginTop="16dp"
@@ -176,7 +178,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Fecha/Hora: 2021-12-07 17:00" />
+                    android:text="Fecha/Hora: 2021-12-27 21:30" />
 
                 <TextView
                     android:id="@+id/texOrigen1"
@@ -190,7 +192,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Destino: Tunja" />
+                    android:text="Destino: Cali" />
             </LinearLayout>
 
 
@@ -294,21 +296,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Fecha/Hora: 2021-12-07 17:00" />
+                    android:text="Fecha/Hora: 2021-12-24 18:00" />
 
                 <TextView
                     android:id="@+id/texOrigen3"
                     android:layout_width="232dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Origen: Bogotá" />
+                    android:text="Origen: Medellín" />
 
                 <TextView
                     android:id="@+id/txtDestino3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Destino: Tunja" />
+                    android:text="Destino: Villavicencio" />
             </LinearLayout>
 
 
@@ -325,8 +327,8 @@
 
     <ImageButton
         android:id="@+id/btnHome"
-        android:layout_width="64dp"
-        android:layout_height="56dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"

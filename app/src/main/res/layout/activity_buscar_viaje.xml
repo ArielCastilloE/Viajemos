@@ -185,7 +185,7 @@
                     android:layout_width="232dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Origen: Bogotá" />
+                    android:text="Origen: Bogotá D.C." />
 
                 <TextView
                     android:id="@+id/txtDestino1"
@@ -244,7 +244,7 @@
                     android:layout_width="232dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Origen: Bogotá" />
+                    android:text="Origen: Bogotá D.C." />
 
                 <TextView
                     android:id="@+id/txtDestino2"

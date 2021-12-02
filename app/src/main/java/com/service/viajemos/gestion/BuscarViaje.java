@@ -82,30 +82,13 @@ public class BuscarViaje extends AppCompatActivity {
                 if(validateForm()) {
                     //buscarViaje();
                     contenedor.setVisibility(View.VISIBLE);
-                    timer[0] = new Timer();
-                    timer[0].schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            finish();
-                        }
-                    }, 3000);
                     //Toast.makeText(BuscarViaje.this, "No hay registros para los criterios, se siguieren otras similares", Toast.LENGTH_SHORT).show();
-                    contenedor.setVisibility(View.VISIBLE);
                 }
                 else{
                     Toast.makeText(BuscarViaje.this,"Datos imcompletos en el Formulario", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-        imgHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BuscarViaje.this, InformacionViajemos.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     private boolean validateForm()
